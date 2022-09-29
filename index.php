@@ -36,7 +36,8 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
 });
     
     $app->post('/', function (Request $request, Response $response, $args) {
-        $response->getBody()->write('"Hello world! Regrese"');
+        // $response->getBody()->write('"Hello world! Regrese"');
+        $response->file_get_contents('php://index.php');
         return $response;
     }); 
     
