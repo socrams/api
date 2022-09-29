@@ -35,12 +35,17 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     return $response;
 });
     
-    $app->get('/', function (Request $request, Response $response, $args) {
+    $app->post('/', function (Request $request, Response $response, $args) {
         $response->getBody()->write('"Hello world! Regrese"');
         return $response;
     }); 
+
+    // $app->post('/', function (Request $request, Response $response, $args) {
+    //     $response->getBody()->write('"Hello world!"');
+    //     return $response;
+    // }); 
     
-$app->post("/identificador/", usuarioControlador::class . '":mostrarUsuario"' );
+$app->post('/identificador/', usuarioControlador::class . ':mostrarUsuario' );
 
 $app->run();
 
