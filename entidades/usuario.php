@@ -5,7 +5,7 @@ class usuario{
     public $apellido;
 
     public function mostrar(){
-        return '"'.$this->nombre . ' ' . $this -> apellido.'"'; 
+        return '"'.$this->nombre . 'aaaa' . $this -> apellido.'"'; 
     }
 }
 
